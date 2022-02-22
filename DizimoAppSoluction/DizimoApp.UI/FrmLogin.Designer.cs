@@ -35,8 +35,8 @@ namespace DizimoApp.UI
             this.label1 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbUsuario = new System.Windows.Forms.TextBox();
+            this.txbSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -112,22 +112,22 @@ namespace DizimoApp.UI
             this.lblSenha.Text = "Senha";
             this.lblSenha.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // txbUsuario
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(144, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 35);
-            this.textBox1.TabIndex = 2;
+            this.txbUsuario.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbUsuario.Location = new System.Drawing.Point(144, 97);
+            this.txbUsuario.Name = "txbUsuario";
+            this.txbUsuario.Size = new System.Drawing.Size(225, 35);
+            this.txbUsuario.TabIndex = 2;
             // 
-            // textBox2
+            // txbSenha
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(144, 156);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(225, 35);
-            this.textBox2.TabIndex = 2;
+            this.txbSenha.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSenha.Location = new System.Drawing.Point(144, 156);
+            this.txbSenha.Name = "txbSenha";
+            this.txbSenha.PasswordChar = '*';
+            this.txbSenha.Size = new System.Drawing.Size(225, 35);
+            this.txbSenha.TabIndex = 2;
             // 
             // label2
             // 
@@ -153,6 +153,7 @@ namespace DizimoApp.UI
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Acessar";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // FrmLogin
             // 
@@ -161,8 +162,8 @@ namespace DizimoApp.UI
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(543, 288);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbSenha);
+            this.Controls.Add(this.txbUsuario);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.lblUsuario);
@@ -187,8 +188,8 @@ namespace DizimoApp.UI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblSenha;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbUsuario;
+        private System.Windows.Forms.TextBox txbSenha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLogin;
     }

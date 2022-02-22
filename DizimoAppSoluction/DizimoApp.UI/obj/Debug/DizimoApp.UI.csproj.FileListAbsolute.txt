@@ -1,7 +1,6 @@
 E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\bin\Debug\DizimoApp.UI.exe.config
 E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\bin\Debug\DizimoApp.UI.exe
 E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\bin\Debug\DizimoApp.UI.pdb
-E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.csproj.AssemblyReference.cache
 E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.Properties.Resources.resources
 E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.csproj.GenerateResource.cache
 E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.csproj.CoreCompileInputs.cache
