@@ -7,3 +7,14 @@ E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\Dizim
 E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.exe
 E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.pdb
 E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.FrmLogin.resources
+C:\Users\Micro\source\repos\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\bin\Debug\DizimoApp.UI.exe.config
+C:\Users\Micro\source\repos\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\bin\Debug\DizimoApp.UI.exe
+C:\Users\Micro\source\repos\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\bin\Debug\DizimoApp.UI.pdb
+C:\Users\Micro\source\repos\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.csproj.AssemblyReference.cache
+C:\Users\Micro\source\repos\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.FrmCadMembros.resources
+C:\Users\Micro\source\repos\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.FrmLogin.resources
+C:\Users\Micro\source\repos\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.Properties.Resources.resources
+C:\Users\Micro\source\repos\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.csproj.GenerateResource.cache
+C:\Users\Micro\source\repos\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.csproj.CoreCompileInputs.cache
+C:\Users\Micro\source\repos\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.exe
+C:\Users\Micro\source\repos\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.pdb
