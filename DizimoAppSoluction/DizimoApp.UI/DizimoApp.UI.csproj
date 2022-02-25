@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmCadEnderecos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadEnderecos.Designer.cs">
+      <DependentUpon>FrmCadEnderecos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCadMembros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCadEnderecos.resx">
+      <DependentUpon>FrmCadEnderecos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCadMembros.resx">
       <DependentUpon>FrmCadMembros.cs</DependentUpon>
     </EmbeddedResource>

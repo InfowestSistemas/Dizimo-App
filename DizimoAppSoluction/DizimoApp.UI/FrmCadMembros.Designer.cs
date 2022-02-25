@@ -31,27 +31,27 @@ namespace DizimoApp.UI
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDataNascimento = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.textConfirmeSeuEmail = new System.Windows.Forms.TextBox();
+            this.txtConfirmeSeuEmail = new System.Windows.Forms.TextBox();
             this.lblConfirmeSuaSenha = new System.Windows.Forms.Label();
-            this.textEmail = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textNome = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.lblDataNascimento = new System.Windows.Forms.Label();
             this.lblTipoPessoa = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDataCadastro = new System.Windows.Forms.TextBox();
             this.lblDataCadastro = new System.Windows.Forms.Label();
-            this.textTelefone = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -81,17 +81,6 @@ namespace DizimoApp.UI
             this.label1.Text = "Dizimo APP";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DizimoApp.UI.Properties.Resources.Dizimo2;
-            this.pictureBox1.Location = new System.Drawing.Point(403, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(89, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -118,14 +107,14 @@ namespace DizimoApp.UI
             this.label3.Text = "Preencha seus dados";
             this.label3.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // txtDataNascimento
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Location = new System.Drawing.Point(10, 191);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtDataNascimento.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtDataNascimento.Location = new System.Drawing.Point(10, 191);
+            this.txtDataNascimento.Name = "txtDataNascimento";
+            this.txtDataNascimento.Size = new System.Drawing.Size(132, 20);
+            this.txtDataNascimento.TabIndex = 2;
+            this.txtDataNascimento.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblNome
             // 
@@ -147,14 +136,14 @@ namespace DizimoApp.UI
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "Email";
             // 
-            // textConfirmeSeuEmail
+            // txtConfirmeSeuEmail
             // 
-            this.textConfirmeSeuEmail.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textConfirmeSeuEmail.Location = new System.Drawing.Point(11, 345);
-            this.textConfirmeSeuEmail.Name = "textConfirmeSeuEmail";
-            this.textConfirmeSeuEmail.Size = new System.Drawing.Size(132, 20);
-            this.textConfirmeSeuEmail.TabIndex = 2;
-            this.textConfirmeSeuEmail.TextChanged += new System.EventHandler(this.textConfirmeSeuEmail_TextChanged);
+            this.txtConfirmeSeuEmail.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtConfirmeSeuEmail.Location = new System.Drawing.Point(11, 345);
+            this.txtConfirmeSeuEmail.Name = "txtConfirmeSeuEmail";
+            this.txtConfirmeSeuEmail.Size = new System.Drawing.Size(132, 20);
+            this.txtConfirmeSeuEmail.TabIndex = 2;
+            this.txtConfirmeSeuEmail.TextChanged += new System.EventHandler(this.textConfirmeSeuEmail_TextChanged);
             // 
             // lblConfirmeSuaSenha
             // 
@@ -167,13 +156,13 @@ namespace DizimoApp.UI
             this.lblConfirmeSuaSenha.Text = "Confirme sua senha";
             this.lblConfirmeSuaSenha.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textEmail
+            // txtEmail
             // 
-            this.textEmail.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textEmail.Location = new System.Drawing.Point(11, 151);
-            this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(298, 20);
-            this.textEmail.TabIndex = 2;
+            this.txtEmail.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtEmail.Location = new System.Drawing.Point(11, 151);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(298, 20);
+            this.txtEmail.TabIndex = 2;
             // 
             // textBox4
             // 
@@ -183,13 +172,13 @@ namespace DizimoApp.UI
             this.textBox4.Size = new System.Drawing.Size(298, 20);
             this.textBox4.TabIndex = 2;
             // 
-            // textNome
+            // txtNome
             // 
-            this.textNome.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textNome.Location = new System.Drawing.Point(11, 109);
-            this.textNome.Name = "textNome";
-            this.textNome.Size = new System.Drawing.Size(298, 20);
-            this.textNome.TabIndex = 2;
+            this.txtNome.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtNome.Location = new System.Drawing.Point(11, 109);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(298, 20);
+            this.txtNome.TabIndex = 2;
             // 
             // lblDataNascimento
             // 
@@ -224,14 +213,14 @@ namespace DizimoApp.UI
             this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // textBox2
+            // txtDataCadastro
             // 
-            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.Location = new System.Drawing.Point(11, 226);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 20);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtDataCadastro.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtDataCadastro.Location = new System.Drawing.Point(11, 226);
+            this.txtDataCadastro.Name = "txtDataCadastro";
+            this.txtDataCadastro.Size = new System.Drawing.Size(132, 20);
+            this.txtDataCadastro.TabIndex = 2;
+            this.txtDataCadastro.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblDataCadastro
             // 
@@ -243,23 +232,23 @@ namespace DizimoApp.UI
             this.lblDataCadastro.TabIndex = 3;
             this.lblDataCadastro.Text = "Data de Cadastro";
             // 
-            // textTelefone
+            // txtTelefone
             // 
-            this.textTelefone.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textTelefone.Location = new System.Drawing.Point(11, 264);
-            this.textTelefone.Name = "textTelefone";
-            this.textTelefone.Size = new System.Drawing.Size(132, 20);
-            this.textTelefone.TabIndex = 2;
-            this.textTelefone.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtTelefone.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTelefone.Location = new System.Drawing.Point(11, 264);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(132, 20);
+            this.txtTelefone.TabIndex = 2;
+            this.txtTelefone.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox5
+            // txtSenha
             // 
-            this.textBox5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox5.Location = new System.Drawing.Point(10, 304);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(132, 20);
-            this.textBox5.TabIndex = 2;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtSenha.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSenha.Location = new System.Drawing.Point(10, 304);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(132, 20);
+            this.txtSenha.TabIndex = 2;
+            this.txtSenha.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblTelefone
             // 
@@ -293,6 +282,17 @@ namespace DizimoApp.UI
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DizimoApp.UI.Properties.Resources.Dizimo2;
+            this.pictureBox1.Location = new System.Drawing.Point(403, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(89, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // FrmCadMembros
             // 
             this.BackColor = System.Drawing.Color.White;
@@ -307,14 +307,14 @@ namespace DizimoApp.UI
             this.Controls.Add(this.lblConfirmeSuaSenha);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.textNome);
-            this.Controls.Add(this.textEmail);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textConfirmeSeuEmail);
-            this.Controls.Add(this.textTelefone);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtDataCadastro);
+            this.Controls.Add(this.txtConfirmeSeuEmail);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.txtDataNascimento);
             this.Controls.Add(this.panel1);
             this.Name = "FrmCadMembros";
             this.RightToLeftLayout = true;
@@ -335,21 +335,21 @@ namespace DizimoApp.UI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDataNascimento;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox textConfirmeSeuEmail;
+        private System.Windows.Forms.TextBox txtConfirmeSeuEmail;
         private System.Windows.Forms.Label lblConfirmeSuaSenha;
-        private System.Windows.Forms.TextBox textEmail;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textNome;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblDataNascimento;
         private System.Windows.Forms.Label lblTipoPessoa;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDataCadastro;
         private System.Windows.Forms.Label lblDataCadastro;
-        private System.Windows.Forms.TextBox textTelefone;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Button btnRegistrar;
