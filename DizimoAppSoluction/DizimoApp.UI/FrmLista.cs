@@ -49,10 +49,16 @@ namespace DizimoApp.UI
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            FrmCadMembros frmCadMembros = new FrmCadMembros();
+            frmCadMembros.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
