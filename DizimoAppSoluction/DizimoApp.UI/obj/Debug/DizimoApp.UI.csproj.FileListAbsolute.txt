@@ -18,3 +18,4 @@ C:\Users\Micro\source\repos\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug
 C:\Users\Micro\source\repos\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.csproj.CoreCompileInputs.cache
 C:\Users\Micro\source\repos\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.exe
 C:\Users\Micro\source\repos\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.pdb
+C:\Users\Micro\source\repos\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.csproj.SuggestedBindingRedirects.cache
