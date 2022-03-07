@@ -31,5 +31,12 @@ namespace DizimoApp.UI
         {
 
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            FrmCadMembros frmCadMembros = new FrmCadMembros();
+            frmCadMembros.Show();
+            this.Close();
+        }
     }
 }

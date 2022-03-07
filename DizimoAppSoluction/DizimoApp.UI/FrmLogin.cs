@@ -24,7 +24,10 @@ namespace DizimoApp.UI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
- 
+            FrmCadMembros frmmembros = new FrmCadMembros();
+            frmmembros.Show();
+            this.Hide();
+
         }
     }
 }
