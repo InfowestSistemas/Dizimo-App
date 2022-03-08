@@ -1,0 +1,6 @@
+E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\bin\Debug\DizimoApp.Dominio.dll
+E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\bin\Debug\DizimoApp.Dominio.pdb
+E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.csproj.AssemblyReference.cache
+E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.csproj.CoreCompileInputs.cache
+E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.dll
+E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.pdb

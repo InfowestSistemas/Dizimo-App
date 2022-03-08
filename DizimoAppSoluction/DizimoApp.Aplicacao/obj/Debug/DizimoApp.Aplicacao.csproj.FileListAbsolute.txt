@@ -1,0 +1,9 @@
+E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Aplicacao.dll
+E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Aplicacao.pdb
+E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Dominio.dll
+E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Dominio.pdb
+E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.csproj.AssemblyReference.cache
+E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.csproj.CoreCompileInputs.cache
+E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.csproj.CopyComplete
+E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.dll
+E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.pdb

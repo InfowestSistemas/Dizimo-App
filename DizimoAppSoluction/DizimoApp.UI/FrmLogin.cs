@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DizimoApp.Dominio;
+using DizimoApp.Aplicacao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,9 +26,26 @@ namespace DizimoApp.UI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            FrmCadMembros frmmembros = new FrmCadMembros();
-            frmmembros.Show();
-            this.Hide();
+            Login login = new Login();
+            bool LoginValido;
+            login.Usuario = txbUsuario.Text;
+            login.Senha = txbSenha.Text;
+
+            var appLogin = new LoginApp();
+            LoginValido = appLogin.AutenticarAcesso(login);
+
+            // Executa se validado
+            if(LoginValido == true)
+            {
+                FrmCadMembros frmmembros = new FrmCadMembros();
+                frmmembros.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Atenção !!! , Usuário ou Senha inválidos");
+            }
+
 
         }
     }

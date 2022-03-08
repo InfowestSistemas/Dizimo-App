@@ -112,5 +112,15 @@
     <None Include="Resources\Dizimo1.jpg" />
     <None Include="Resources\Dizimo.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DizimoApp.Aplicacao\DizimoApp.Aplicacao.csproj">
+      <Project>{33252b01-9281-404a-9fc6-cd82e1cf5979}</Project>
+      <Name>DizimoApp.Aplicacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DizimoApp.Dominio\DizimoApp.Dominio.csproj">
+      <Project>{2ad28da8-ab7a-4b52-8afc-d96b6b178b65}</Project>
+      <Name>DizimoApp.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
