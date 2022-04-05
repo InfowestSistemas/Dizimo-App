@@ -4,3 +4,9 @@ E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\
 E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.csproj.CoreCompileInputs.cache
 E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.dll
 E:\04_IW\18_DizimoApp\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.pdb
+C:\Users\Micro\Documents\GitHub\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\bin\Debug\DizimoApp.Dominio.dll
+C:\Users\Micro\Documents\GitHub\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\bin\Debug\DizimoApp.Dominio.pdb
+C:\Users\Micro\Documents\GitHub\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.csproj.AssemblyReference.cache
+C:\Users\Micro\Documents\GitHub\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Micro\Documents\GitHub\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.dll
+C:\Users\Micro\Documents\GitHub\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.pdb

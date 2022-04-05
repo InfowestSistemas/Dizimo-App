@@ -1,0 +1,6 @@
+C:\Users\Micro\Documents\GitHub\Dizimo-App\DizimoAppSoluction\DizimoApp.DAL\bin\Debug\DizimoApp.DAL.dll
+C:\Users\Micro\Documents\GitHub\Dizimo-App\DizimoAppSoluction\DizimoApp.DAL\bin\Debug\DizimoApp.DAL.pdb
+C:\Users\Micro\Documents\GitHub\Dizimo-App\DizimoAppSoluction\DizimoApp.DAL\obj\Debug\DizimoApp.DAL.csproj.AssemblyReference.cache
+C:\Users\Micro\Documents\GitHub\Dizimo-App\DizimoAppSoluction\DizimoApp.DAL\obj\Debug\DizimoApp.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Micro\Documents\GitHub\Dizimo-App\DizimoAppSoluction\DizimoApp.DAL\obj\Debug\DizimoApp.DAL.dll
+C:\Users\Micro\Documents\GitHub\Dizimo-App\DizimoAppSoluction\DizimoApp.DAL\obj\Debug\DizimoApp.DAL.pdb

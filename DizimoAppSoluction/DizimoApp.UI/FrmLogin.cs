@@ -30,10 +30,10 @@ namespace DizimoApp.UI
             bool LoginValido;
             login.Usuario = txbUsuario.Text;
             login.Senha = txbSenha.Text;
-
+ 
             var appLogin = new LoginApp();
             LoginValido = appLogin.AutenticarAcesso(login);
-
+ 
             // Executa se validado
             if(LoginValido == true)
             {
