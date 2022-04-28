@@ -18,3 +18,15 @@ C:\Users\Micro\Documents\GitHub\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicaca
 C:\Users\Micro\Documents\GitHub\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.csproj.CopyComplete
 C:\Users\Micro\Documents\GitHub\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.dll
 C:\Users\Micro\Documents\GitHub\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.pdb
+F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Aplicacao.dll
+F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Aplicacao.pdb
+F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Dominio.dll
+F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Dominio.pdb
+F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.csproj.AssemblyReference.cache
+F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.csproj.CoreCompileInputs.cache
+F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.csproj.CopyComplete
+F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.dll
+F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.pdb
+F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Repository.dll
+F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Repository.pdb
+F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Repository.dll.config

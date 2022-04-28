@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DizimoApp.Dominio", "Dizimo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DizimoApp.Aplicacao", "DizimoApp.Aplicacao\DizimoApp.Aplicacao.csproj", "{33252B01-9281-404A-9FC6-CD82E1CF5979}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DizimoApp.DAL", "DizimoApp.DAL\DizimoApp.DAL.csproj", "{48F337EA-F5D8-4829-81B3-30B4CCCCD705}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DizimoApp.Repository", "DizimoApp.DAL\DizimoApp.Repository.csproj", "{48F337EA-F5D8-4829-81B3-30B4CCCCD705}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
