@@ -26,8 +26,8 @@ namespace DizimoApp.Repository.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=DbDizimoApp;Persist Security Info=True;User" +
-            " ID=dizimo;Password=123456")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=DizimoDB;Persist Security Info=True;User ID" +
+            "=FXAdmin;Password=*#9F4m1l14")]
         public string SQLConexaoDB {
             get {
                 return ((string)(this["SQLConexaoDB"]));

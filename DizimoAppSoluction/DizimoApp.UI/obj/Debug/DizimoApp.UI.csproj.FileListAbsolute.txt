@@ -64,3 +64,6 @@ F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\D
 F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.csproj.CopyComplete
 F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.exe
 F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\obj\Debug\DizimoApp.UI.pdb
+F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\bin\Debug\DizimoApp.Repository.dll
+F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\bin\Debug\DizimoApp.Repository.pdb
+F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.UI\bin\Debug\DizimoApp.Repository.dll.config

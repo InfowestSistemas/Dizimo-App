@@ -5,7 +5,7 @@ using DizimoApp.Repository.Properties;
 
 namespace DizimoApp.Repository
 {
-	public class DbDizimoApp
+	public class DizimoDB
 	{
         //Criar Conexão com o Banco 
         SqlConnection sqlConnection = CriaConexaoSQLServer ( );

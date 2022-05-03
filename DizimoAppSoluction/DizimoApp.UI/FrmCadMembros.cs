@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DizimoApp.Aplicacao;
 
 namespace DizimoApp.UI
 {
@@ -15,6 +16,8 @@ namespace DizimoApp.UI
         public FrmCadMembros()
         {
             InitializeComponent();
+ 
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -79,5 +82,12 @@ namespace DizimoApp.UI
 
         }
 
-    }
+		private void btnListarUsuarios_Click( object sender, EventArgs e )
+		{
+            var login = new LoginApp ( );
+            dataGridView_Cadastros.DataSource = login.ListaUsuarios ( );
+
+
+        }
+	}
 }
