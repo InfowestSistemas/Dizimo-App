@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\DizimoAppSoluction",
-    "\\DizimoAppSoluction\\DizimoApp.UI",
-    "\\DizimoAppSoluction\\DizimoApp.UI\\bin\\Release"
+    ""
   ],
-  "SelectedNode": "\\DizimoAppSoluction\\DizimoApp.UI\\FrmCadEnderecos.Designer.cs",
+  "SelectedNode": "\\DizimoAppSoluction.sln",
   "PreviewInSolutionExplorer": false
 }

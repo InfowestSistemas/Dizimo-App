@@ -15,5 +15,12 @@ namespace DizimoApp.Dominio
         public string Cidade { get; set; }
         public string UF { get; set; }
         public int Telefone { get; set; }
+        public object ID { get; set; }
+        public int DataCadastro { get; set; }
+
+        public class EnderecoCollection : List<Endereco>
+        {
+
+        }
     }
 }

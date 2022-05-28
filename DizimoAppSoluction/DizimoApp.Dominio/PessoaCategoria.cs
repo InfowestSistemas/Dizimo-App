@@ -10,5 +10,10 @@ namespace DizimoApp.Dominio
     {
         public string PessoaFisica { get; set; }
         public string PessoaJuridica { get; set; }
+        public class PessoaCategoriaCollection: List<PessoaCategoria>
+        {
+
+        }
+
     }
 }

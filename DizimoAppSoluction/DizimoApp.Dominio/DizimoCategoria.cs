@@ -11,5 +11,9 @@ namespace DizimoApp.Dominio
         public double OfertaComum { get; set; }
         public double OfertaMissionaria { get; set; }
         public double Voto { get; set; }
+        public class DizimoCategoriaCollection : List<DizimoCategoria>
+        {
+
+        }
     }
 }

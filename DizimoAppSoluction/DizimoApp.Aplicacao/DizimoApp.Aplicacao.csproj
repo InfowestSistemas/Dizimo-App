@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DizimoApp.cs" />
+    <Compile Include="EnderecoApp.cs" />
     <Compile Include="LoginApp.cs" />
+    <Compile Include="PessoaApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

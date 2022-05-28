@@ -30,3 +30,15 @@ F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\obj\
 F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Repository.dll
 F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Repository.pdb
 F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Repository.dll.config
+C:\Projects\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Aplicacao.dll
+C:\Projects\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Aplicacao.pdb
+C:\Projects\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Dominio.dll
+C:\Projects\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Repository.dll
+C:\Projects\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Repository.pdb
+C:\Projects\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Repository.dll.config
+C:\Projects\DizimoAppSoluction\DizimoApp.Aplicacao\bin\Debug\DizimoApp.Dominio.pdb
+C:\Projects\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.csproj.AssemblyReference.cache
+C:\Projects\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.csproj.CoreCompileInputs.cache
+C:\Projects\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.csproj.CopyComplete
+C:\Projects\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.dll
+C:\Projects\DizimoAppSoluction\DizimoApp.Aplicacao\obj\Debug\DizimoApp.Aplicacao.pdb

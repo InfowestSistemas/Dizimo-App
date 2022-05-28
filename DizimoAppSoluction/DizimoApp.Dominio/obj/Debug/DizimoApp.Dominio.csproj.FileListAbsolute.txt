@@ -16,3 +16,9 @@ F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\obj\De
 F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.dll
 F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.pdb
 F:\99_Estudos\01_AppTests\Dizimo-App\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.csproj.AssemblyReference.cache
+C:\Projects\DizimoAppSoluction\DizimoApp.Dominio\bin\Debug\DizimoApp.Dominio.dll
+C:\Projects\DizimoAppSoluction\DizimoApp.Dominio\bin\Debug\DizimoApp.Dominio.pdb
+C:\Projects\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.csproj.AssemblyReference.cache
+C:\Projects\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.csproj.CoreCompileInputs.cache
+C:\Projects\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.dll
+C:\Projects\DizimoAppSoluction\DizimoApp.Dominio\obj\Debug\DizimoApp.Dominio.pdb
