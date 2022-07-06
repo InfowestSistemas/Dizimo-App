@@ -10,7 +10,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Endereco](
-	[Id] [int] NOT NULL,
+	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[IdPessoa] [int] NOT NULL,
 	[Rua] [varchar](300) NULL,
 	[Numero] [varchar](50) NULL,
