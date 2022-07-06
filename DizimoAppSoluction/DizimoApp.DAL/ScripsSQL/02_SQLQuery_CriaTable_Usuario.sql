@@ -16,10 +16,13 @@ CREATE TABLE [dbo].[Usuario](
 	[Usuario] [varchar](10) NULL,
 	[Senha] [varchar](16) NULL,
 	[DataCadastro] [datetime2](7) NULL,
-	[Status] [bit] NULL,
+	[Status] [bit] NOT NULL,
  CONSTRAINT [PK_Usuario] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
+INSERT INTO [Usuario] (IdPessoa,Usuario,Senha,DataCadastro,Status)
+VALUES(1,'Admin','010203',GETDATE(),1)

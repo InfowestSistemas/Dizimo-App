@@ -57,9 +57,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ScripsSQL\SQLQuery_CriaTable_Pessoa.sql" />
-    <Content Include="ScripsSQL\SQLQuery_CriaTable_Endereco.sql" />
-    <Content Include="ScripsSQL\SQLQuery_CriaTable_Usuario.sql" />
+    <Content Include="ScripsSQL\01_SQLQuery_CriaTable_Pessoa.sql" />
+    <Content Include="ScripsSQL\03_SQLQuery_CriaTable_Endereco.sql" />
+    <Content Include="ScripsSQL\02_SQLQuery_CriaTable_Usuario.sql" />
     <Content Include="ScripsSQL\SQLQuery_DizimoAppAnalise.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

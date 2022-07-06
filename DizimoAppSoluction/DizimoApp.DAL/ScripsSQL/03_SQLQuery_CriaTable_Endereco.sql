@@ -9,9 +9,9 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[Endereço](
+CREATE TABLE [dbo].[Endereco](
 	[Id] [int] NOT NULL,
-	[IdPessoa] [int] NULL,
+	[IdPessoa] [int] NOT NULL,
 	[Rua] [varchar](300) NULL,
 	[Numero] [varchar](50) NULL,
 	[Bairro] [varchar](300) NULL,
@@ -25,4 +25,5 @@ CREATE TABLE [dbo].[Endereço](
 ) ON [PRIMARY]
 GO
 
-
+INSERT INTO [Endereco] (IdPessoa,Rua,Numero,Bairro,Cep,Cidade,DataCadastro)
+VALUES(1,'Rua da Vitória','777','Esperança','777-777-77','Sete Lagoas',GETDATE())

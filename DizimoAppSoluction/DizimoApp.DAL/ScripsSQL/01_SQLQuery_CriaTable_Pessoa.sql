@@ -12,9 +12,9 @@ GO
 CREATE TABLE [dbo].[Pessoa](
 	[ID] [int] IDENTITY(1,1) NOT NULL,
 	[Nome] [varchar](250) NOT NULL,
-	[Telefone] [varchar](10) NOT NULL,
-	[Email] [varchar](100) NOT NULL,
-	[DataCadastro] [datetime] NOT NULL,
+	[Telefone] [varchar](30) NULL,
+	[Email] [varchar](100) NULL,
+	[DataCadastro] [datetime2](7) NOT NULL,
  CONSTRAINT [PK_dbPessoa] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
@@ -22,4 +22,5 @@ CREATE TABLE [dbo].[Pessoa](
 ) ON [PRIMARY]
 GO
 
-
+INSERT INTO [Pessoa] (Nome,Telefone,Email,DataCadastro)
+VALUES('Usuário Admin','031-9999-9999','admin@gmail.com',GETDATE())
