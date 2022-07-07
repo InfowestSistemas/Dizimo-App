@@ -41,12 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dizimo.cs" />
-    <Compile Include="DizimoCategoria.cs" />
     <Compile Include="Endereco.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Pessoa.cs" />
-    <Compile Include="PessoaCategoria.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
