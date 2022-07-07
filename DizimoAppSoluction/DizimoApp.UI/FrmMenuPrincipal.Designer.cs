@@ -38,7 +38,12 @@ namespace DizimoApp.UI
             this.dataGridView_ListaCadastros = new System.Windows.Forms.DataGridView();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txbPesquisa = new System.Windows.Forms.TextBox();
-            this.lblPesquisar = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblContatoSelecionado = new System.Windows.Forms.Label();
+            this.lblContato = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ListaCadastros)).BeginInit();
             this.SuspendLayout();
@@ -95,19 +100,25 @@ namespace DizimoApp.UI
             // dataGridView_ListaCadastros
             // 
             this.dataGridView_ListaCadastros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_ListaCadastros.Location = new System.Drawing.Point(12, 77);
+            this.dataGridView_ListaCadastros.Location = new System.Drawing.Point(12, 97);
             this.dataGridView_ListaCadastros.Name = "dataGridView_ListaCadastros";
-            this.dataGridView_ListaCadastros.Size = new System.Drawing.Size(984, 422);
+            this.dataGridView_ListaCadastros.Size = new System.Drawing.Size(984, 402);
             this.dataGridView_ListaCadastros.TabIndex = 15;
+            this.dataGridView_ListaCadastros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ListaCadastros_CellClick);
+            this.dataGridView_ListaCadastros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ListaCadastros_CellContentClick);
             // 
             // btnPesquisar
             // 
             this.btnPesquisar.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPesquisar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnPesquisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnPesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnPesquisar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnPesquisar.Location = new System.Drawing.Point(384, 37);
+            this.btnPesquisar.Location = new System.Drawing.Point(384, 36);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(86, 32);
+            this.btnPesquisar.Size = new System.Drawing.Size(86, 33);
             this.btnPesquisar.TabIndex = 16;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
@@ -121,17 +132,83 @@ namespace DizimoApp.UI
             this.txbPesquisa.Size = new System.Drawing.Size(366, 33);
             this.txbPesquisa.TabIndex = 17;
             // 
-            // lblPesquisar
+            // lblTitulo
             // 
-            this.lblPesquisar.AutoSize = true;
-            this.lblPesquisar.BackColor = System.Drawing.Color.White;
-            this.lblPesquisar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPesquisar.Location = new System.Drawing.Point(306, -6);
-            this.lblPesquisar.Name = "lblPesquisar";
-            this.lblPesquisar.Size = new System.Drawing.Size(309, 30);
-            this.lblPesquisar.TabIndex = 18;
-            this.lblPesquisar.Text = "Lista de Membros cadastrados";
-            this.lblPesquisar.Click += new System.EventHandler(this.lblPesquisar_Click);
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.White;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(367, -6);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(309, 30);
+            this.lblTitulo.TabIndex = 18;
+            this.lblTitulo.Text = "Lista de Membros cadastrados";
+            this.lblTitulo.Click += new System.EventHandler(this.lblPesquisar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEditar.Location = new System.Drawing.Point(476, 37);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(86, 32);
+            this.btnEditar.TabIndex = 19;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluir.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnExcluir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnExcluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnExcluir.Location = new System.Drawing.Point(568, 37);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(86, 32);
+            this.btnExcluir.TabIndex = 20;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(938, 56);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(18, 13);
+            this.lblID.TabIndex = 21;
+            this.lblID.Text = "ID";
+            this.lblID.Visible = false;
+            // 
+            // lblContatoSelecionado
+            // 
+            this.lblContatoSelecionado.AutoSize = true;
+            this.lblContatoSelecionado.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContatoSelecionado.Location = new System.Drawing.Point(12, 73);
+            this.lblContatoSelecionado.Name = "lblContatoSelecionado";
+            this.lblContatoSelecionado.Size = new System.Drawing.Size(174, 19);
+            this.lblContatoSelecionado.TabIndex = 22;
+            this.lblContatoSelecionado.Text = "Contato Selecionado :";
+            this.lblContatoSelecionado.Visible = false;
+            // 
+            // lblContato
+            // 
+            this.lblContato.AutoSize = true;
+            this.lblContato.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContato.Location = new System.Drawing.Point(192, 73);
+            this.lblContato.Name = "lblContato";
+            this.lblContato.Size = new System.Drawing.Size(69, 21);
+            this.lblContato.TabIndex = 21;
+            this.lblContato.Text = "Contato";
+            this.lblContato.Visible = false;
             // 
             // FrmMenuPrincipal
             // 
@@ -139,7 +216,12 @@ namespace DizimoApp.UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(996, 524);
-            this.Controls.Add(this.lblPesquisar);
+            this.Controls.Add(this.lblContatoSelecionado);
+            this.Controls.Add(this.lblContato);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.txbPesquisa);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.dataGridView_ListaCadastros);
@@ -169,6 +251,11 @@ namespace DizimoApp.UI
         private System.Windows.Forms.DataGridView dataGridView_ListaCadastros;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.TextBox txbPesquisa;
-        private System.Windows.Forms.Label lblPesquisar;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label lblContatoSelecionado;
+        private System.Windows.Forms.Label lblContato;
     }
 }

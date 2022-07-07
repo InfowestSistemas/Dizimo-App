@@ -52,7 +52,7 @@ namespace DizimoApp.Aplicacao
 			return endereco;
 		}
 
-		public string Update( Endereco endereco )
+		public Endereco Update( Endereco endereco )
 		{
 			try
 			{
@@ -68,16 +68,25 @@ namespace DizimoApp.Aplicacao
 				string IdProcessamento = Convert.ToString( dbDizimo.ExecutarManipulacao( CommandType.Text,
 				"   UPDATE ENDERECO  " +
 				"   SET Rua=@Rua,Numero=@Numero,Bairro=@Bairro,Cep=@Cep,Cidade=@Cidade,DataCadastro=@DataCadastro " +
-				"   WHERE ID=@ID " ) );
+				"   WHERE ID=@ID " +
+				"  SELECT (@ID) AS Retorno  "
+				) );
 
+				if ( !string.IsNullOrEmpty( IdProcessamento ) )
+				{
+					endereco.ID = Convert.ToInt32( IdProcessamento );
 
-				return IdProcessamento;
+				}
+				return endereco;
 			}
 			catch ( Exception exception )
 			{
 
-				return exception.Message;
+				Console.WriteLine( "Erro" + exception );
+
 			}
+
+			return endereco;
 		}
 
 		public string Delete( Endereco endereco )
@@ -138,6 +147,50 @@ namespace DizimoApp.Aplicacao
 
 			return null;
 		}
+
+		public Endereco ListaEnderecoPorIDPessoa(int IdPessoa)
+		{
+			var endereco = new Endereco();
+			try
+			{
+				dbDizimo.LimparParametros();
+				dbDizimo.AdicionarParametros( "@IdPessoa", IdPessoa );
+				DataTable dataTable = dbDizimo.ExecutaConsulta( CommandType.Text,
+				" SELECT * FROM Endereco " +
+				" WHERE IdPessoa=@IdPessoa " +
+				" ORDER BY ID ASC "
+				);
+
+				//Percorrer o DataTable 
+				//Cada linha do datatable é um Registro
+				//for = para  each cada
+
+				foreach ( DataRow item in dataTable.Rows )
+				{
+					
+					//colocar dados da linha nele
+					endereco.ID = Convert.ToInt32( item[ "ID" ] );
+					endereco.IdPessoa = Convert.ToInt32( item[ "IdPessoa" ] );
+					endereco.Rua = Convert.ToString( item[ "Rua" ] );
+					endereco.Numero = Convert.ToString( item[ "Numero" ] );
+					endereco.Bairro = Convert.ToString( item[ "Bairro" ] );
+					endereco.Cep = Convert.ToString( item[ "Cep" ] );
+					endereco.Cidade = Convert.ToString( item[ "Cidade" ] );
+					endereco.DataCadastro = Convert.ToDateTime( item[ "DataCadastro" ] );
+ 
+				}
+
+				return endereco;
+			}
+			catch ( Exception exception )
+			{
+				Console.WriteLine( "Erro " + exception.Message );
+			}
+
+			return endereco;
+		}
+
+
 	}
 
 }

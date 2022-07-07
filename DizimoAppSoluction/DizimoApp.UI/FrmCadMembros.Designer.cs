@@ -29,9 +29,7 @@ namespace DizimoApp.UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -61,44 +59,23 @@ namespace DizimoApp.UI
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_FrmCadastro)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnExcluir
-            // 
-            this.btnExcluir.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnExcluir.Location = new System.Drawing.Point(426, 339);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(86, 32);
-            this.btnExcluir.TabIndex = 12;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
             // btnCadastrar
             // 
             this.btnCadastrar.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCadastrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnCadastrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCadastrar.Location = new System.Drawing.Point(240, 339);
+            this.btnCadastrar.Location = new System.Drawing.Point(551, 339);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(88, 32);
+            this.btnCadastrar.Size = new System.Drawing.Size(147, 32);
             this.btnCadastrar.TabIndex = 10;
             this.btnCadastrar.Text = "Salvar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEditar.Location = new System.Drawing.Point(334, 339);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(86, 32);
-            this.btnEditar.TabIndex = 11;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // label1
             // 
@@ -154,6 +131,7 @@ namespace DizimoApp.UI
             this.dataGridView_FrmCadastro.Name = "dataGridView_FrmCadastro";
             this.dataGridView_FrmCadastro.Size = new System.Drawing.Size(686, 92);
             this.dataGridView_FrmCadastro.TabIndex = 14;
+            this.dataGridView_FrmCadastro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_FrmCadastro_CellClick);
             this.dataGridView_FrmCadastro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_FrmCadastro_CellContentClick);
             // 
             // btn_Voltar
@@ -161,9 +139,9 @@ namespace DizimoApp.UI
             this.btn_Voltar.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_Voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Voltar.ForeColor = System.Drawing.Color.White;
-            this.btn_Voltar.Location = new System.Drawing.Point(151, 339);
+            this.btn_Voltar.Location = new System.Drawing.Point(9, 339);
             this.btn_Voltar.Name = "btn_Voltar";
-            this.btn_Voltar.Size = new System.Drawing.Size(83, 32);
+            this.btn_Voltar.Size = new System.Drawing.Size(147, 32);
             this.btn_Voltar.TabIndex = 13;
             this.btn_Voltar.Text = "Voltar";
             this.btn_Voltar.UseVisualStyleBackColor = false;
@@ -344,9 +322,7 @@ namespace DizimoApp.UI
             this.Controls.Add(this.txbNome);
             this.Controls.Add(this.btn_Voltar);
             this.Controls.Add(this.dataGridView_FrmCadastro);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmCadMembros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -362,9 +338,7 @@ namespace DizimoApp.UI
         }
 
         #endregion
-        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;

@@ -14,11 +14,21 @@ namespace DizimoApp.UI
 {
     public partial class FrmCadMembros : Form
     {
+        Pessoa pessoaEdit = new Pessoa();
+
         public FrmCadMembros()
         {
             InitializeComponent();
 
-
+        }
+        public FrmCadMembros(int IdPessoa)
+        {
+            InitializeComponent();
+             if ( IdPessoa > 0 )
+            {
+                pessoaEdit.ID = IdPessoa;
+                listarPorID( IdPessoa );
+            }
         }
 
         private void textBox1_TextChanged( object sender, EventArgs e )
@@ -53,6 +63,18 @@ namespace DizimoApp.UI
 
         private void btnCadastrar_Click( object sender, EventArgs e )
         {
+            if(pessoaEdit.ID > 0 )
+            {
+                Editar();
+            }
+            else
+            {
+                Salvar();
+            }
+        }
+ 
+        private void Salvar()
+        {
             var pessoaReturn = new Pessoa();
             var enderecoReturn = new Endereco();
             var pessoa = new Pessoa();
@@ -70,9 +92,12 @@ namespace DizimoApp.UI
             var pessoaApp = new PessoaApp();
             try
             {
-                pessoaReturn = pessoaApp.Create( pessoa );
+                if ( !string.IsNullOrEmpty( pessoa.Nome ) && !string.IsNullOrEmpty( pessoa.Email ) )
+                    pessoaReturn = pessoaApp.Create( pessoa );
+                else
+                    MessageBox.Show( "Atenção ! Preencha os campos Nome e Email antes de gravar" );
             }
-            catch ( Exception ex)
+            catch ( Exception ex )
             {
                 MessageBox.Show( "Erro ao cadastrar tentar cadastrar na tabela Pessoa" + ex );
             }
@@ -92,38 +117,97 @@ namespace DizimoApp.UI
                 {
                     enderecoReturn = enderecoApp.Create( endereco );
                 }
-                catch ( Exception ex)
+                catch ( Exception ex )
                 {
                     MessageBox.Show( "Erro ao cadastrar tentar cadastrar na tabela Pessoa" + ex );
                 }
 
             }
-            if ( pessoaReturn.ID > 0  && enderecoReturn.ID > 0 )
+            if ( pessoaReturn.ID > 0 && enderecoReturn.ID > 0 )
             {
                 dataGridView_FrmCadastro.DataSource = pessoaApp.ListarPessoaPorID( pessoaReturn.ID );
-                MessageBox.Show("Dados Cadastrados com Sucesso");
+                MessageBox.Show( "Dados Cadastrados com Sucesso" );
                 LimparCampos();
-            } 
+            }
         }
 
-        public void LimparCampos()
+        private void Editar()
         {
-           txbNome.Text = string.Empty;
-           txbEmail.Text = string.Empty;
-            txbTelefone.Text = string.Empty;
-            checkBoxStatus.Checked = false;  
-           txbRua.Text = string.Empty;
-            txbNumero.Text = string.Empty;
-            txbBairro.Text = string.Empty;
-            txbCep.Text = string.Empty;
-            txbCidade.Text = string.Empty;
+            var pessoaReturn = new Pessoa();
+            var enderecoReturn = new Endereco();
+            var enderecoEdit = new Endereco();
+            var pessoa = new Pessoa();
+            pessoa.ID = pessoaEdit.ID;
+            pessoa.Nome = txbNome.Text;
+            pessoa.Email = txbEmail.Text;
+            pessoa.Telefone = txbTelefone.Text;
+            if ( checkBoxStatus.Checked == true )
+            {
+                pessoa.Status = true;
+            }
+            else
+            {
+                pessoa.Status = false;
+            }
+            var pessoaApp = new PessoaApp();
+            try
+            {
+                if ( !string.IsNullOrEmpty( pessoa.Nome ) && !string.IsNullOrEmpty( pessoa.Email ) )
+                    pessoaReturn = pessoaApp.Update( pessoa );
+                else
+                    MessageBox.Show( "Atenção ! Preencha os campos Nome e Email antes de gravar" );
+            }
+            catch ( Exception ex )
+            {
+                MessageBox.Show( "Erro ao cadastrar tentar cadastrar na tabela Pessoa" + ex );
+            }
+
+            if ( pessoaReturn != null )
+            {
+                var enderecoApp = new EnderecoApp();
+                enderecoEdit = enderecoApp.ListaEnderecoPorIDPessoa( pessoaEdit.ID );
+
+                var endereco = new Endereco();
+                endereco.ID = enderecoEdit.ID;
+                endereco.IdPessoa = pessoaReturn.ID;
+                endereco.Rua = txbRua.Text;
+                endereco.Numero = txbNumero.Text;
+                endereco.Bairro = txbBairro.Text;
+                endereco.Cep = txbCep.Text;
+                endereco.Cidade = txbCidade.Text;
+
+
+                try
+                {
+                    enderecoReturn = enderecoApp.Update( endereco );
+                }
+                catch ( Exception ex )
+                {
+                    MessageBox.Show( "Erro ao cadastrar tentar cadastrar na tabela Pessoa" + ex );
+                }
+
+            }
+            if ( pessoaReturn.ID > 0 && enderecoReturn.ID > 0 )
+            {
+                dataGridView_FrmCadastro.DataSource = pessoaApp.ListarPessoaPorID( pessoaReturn.ID );
+                dataGridView_FrmCadastro.Refresh();
+                MessageBox.Show( "Dados Atualizados com Sucesso !" );
+                LimparCampos();
+            }
         }
 
         private void btn_Voltar_Click( object sender, EventArgs e )
         {
-            FrmMenuPrincipal frmPrincipal = new FrmMenuPrincipal();
-            frmPrincipal.Show();
-            this.Close();
+            if ( pessoaEdit.ID > 0 )
+            {
+                this.Close();
+            }else
+            {
+                FrmMenuPrincipal frmPrincipal = new FrmMenuPrincipal();
+                frmPrincipal.Show();
+                this.Close();
+            }
+
         }
 
         private void btnCadastrar_Enderecos_Click( object sender, EventArgs e )
@@ -163,11 +247,38 @@ namespace DizimoApp.UI
 
         private void dataGridView_FrmCadastro_CellContentClick( object sender, DataGridViewCellEventArgs e )
         {
+            
+        }
+
+        #region [ Métodos Auxiliares ]
+        public void LimparCampos()
+        {
+            txbNome.Text = string.Empty;
+            txbEmail.Text = string.Empty;
+            txbTelefone.Text = string.Empty;
+            checkBoxStatus.Checked = false;
+            txbRua.Text = string.Empty;
+            txbNumero.Text = string.Empty;
+            txbBairro.Text = string.Empty;
+            txbCep.Text = string.Empty;
+            txbCidade.Text = string.Empty;
+        }
+
+        public void listarPorID(int IdPessoa)
+        {
+            var pessoaApp = new PessoaApp();
+            dataGridView_FrmCadastro.DataSource = pessoaApp.ListarPessoaPorID( IdPessoa );
+        }
+        #endregion
+
+        private void dataGridView_FrmCadastro_CellClick( object sender, DataGridViewCellEventArgs e )
+        {
             string ID = dataGridView_FrmCadastro.CurrentRow.Cells[ 0 ].Value.ToString();
             string Nome = dataGridView_FrmCadastro.CurrentRow.Cells[ 1 ].Value.ToString();
-            string Email = dataGridView_FrmCadastro.CurrentRow.Cells[ 2 ].Value.ToString();
-            string Telefone = dataGridView_FrmCadastro.CurrentRow.Cells[ 3 ].Value.ToString();
+            string Telefone = dataGridView_FrmCadastro.CurrentRow.Cells[ 2 ].Value.ToString();
+            string Email = dataGridView_FrmCadastro.CurrentRow.Cells[ 3 ].Value.ToString();
             string Status = dataGridView_FrmCadastro.CurrentRow.Cells[ 4 ].Value.ToString();
+            string dataCadastro = dataGridView_FrmCadastro.CurrentRow.Cells[ 5 ].Value.ToString();
             string Rua = dataGridView_FrmCadastro.CurrentRow.Cells[ 6 ].Value.ToString();
             string Numero = dataGridView_FrmCadastro.CurrentRow.Cells[ 7 ].Value.ToString();
             string Bairro = dataGridView_FrmCadastro.CurrentRow.Cells[ 8 ].Value.ToString();

@@ -51,7 +51,7 @@ namespace DizimoApp.Aplicacao
             return pessoa;
         }
 
-		public string Update( Pessoa pessoa )
+		public Pessoa Update( Pessoa pessoa )
 		{
 			try
 			{
@@ -68,27 +68,36 @@ namespace DizimoApp.Aplicacao
 				string IdProcessamento = Convert.ToString( dbDizimo.ExecutarManipulacao( CommandType.Text,
 				"   UPDATE PESSOA  " +
 				"   SET Nome=@Nome,Email=@Email,Telefone=@Telefone,Status=@Status,DataCadastro=@DataCadastro " +
-				"   WHERE ID=@ID " ) );
+				"   WHERE ID=@ID "+
+				"  SELECT (@ID) AS Retorno  "
+				) );
 
-				return IdProcessamento;
+				if ( !string.IsNullOrEmpty( IdProcessamento ) )
+				{
+					pessoa.ID = Convert.ToInt32( IdProcessamento );
+
+				}
+				return pessoa;
 			}
 			catch ( Exception exception )
 			{
-
-				return exception.Message;
-
+				Console.WriteLine( "Erro" + exception );
 			}
+
+			return pessoa;
 		}
 
-		public string Delete( Pessoa pessoa )
+		public string Delete( int Id )
 		{
 			try
 			{
 				dbDizimo.LimparParametros();
 
-				dbDizimo.AdicionarParametros( "@ID", pessoa.ID );
+				dbDizimo.AdicionarParametros( "@ID", Id );
 				string IdProcessamento = Convert.ToString( dbDizimo.ExecutarManipulacao( CommandType.Text,
-				"   DELETE Usuario WHERE ID=@ID" ) ); 
+				"   DELETE PESSOA WHERE ID=@ID" +
+				"    SELECT (@ID) AS Retorno  "
+				) ); 
 
 				return IdProcessamento;
 			}
