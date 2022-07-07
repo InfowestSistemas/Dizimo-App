@@ -37,9 +37,11 @@ namespace DizimoApp.UI
             // Executa se validado
             if(LoginValido == true)
             {
-                FrmCadMembros frmmembros = new FrmCadMembros();
-                frmmembros.Show();
+ 
+                FrmMenuPrincipal menuPrincipal = new FrmMenuPrincipal();
+                menuPrincipal.Show();
                 this.Hide();
+
             }
             else
             {
@@ -47,6 +49,12 @@ namespace DizimoApp.UI
             }
 
 
+        }
+
+        private void FrmLogin_Load( object sender, EventArgs e )
+        {
+            txbUsuario.Text = "Admin";
+            txbSenha.Text = "010203";
         }
     }
 }

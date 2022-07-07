@@ -161,6 +161,7 @@ namespace DizimoApp.UI
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Name = "FrmContribuicao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contribuições";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -9,80 +9,91 @@ using System.Threading.Tasks;
 
 namespace DizimoApp.Aplicacao
 {
-    class EnderecoApp
-    {
-        DizimoDB dbDizimo = new DizimoDB();
-        public string Create( Endereco endereco)
-        {
+	public class EnderecoApp
+	{
+		DizimoDB dbDizimo = new DizimoDB();
+		public Endereco Create( Endereco endereco )
+		{
 			try
 			{
-				
-				dbDizimo.AdicionarParametros("@Id", 1);
-				dbDizimo.AdicionarParametros("@Rua", endereco.Rua);
-				dbDizimo.AdicionarParametros("@Numero", endereco.Numero);
-				dbDizimo.AdicionarParametros("@Bairro", endereco.Bairro);
-				dbDizimo.AdicionarParametros("@Cep", endereco.Cep);
-				dbDizimo.AdicionarParametros("@Cidade", endereco.Cidade);
-				dbDizimo.AdicionarParametros("@DataCadastro", DateTime.Now);
-				
 
-				string IdProcessamento = Convert.ToString(dbDizimo.ExecutarManipulacao(CommandType.Text,
+				dbDizimo.LimparParametros();
+				dbDizimo.AdicionarParametros( "@ID ", "" );
+				dbDizimo.AdicionarParametros( "@IdPessoa", endereco.IdPessoa );
+				dbDizimo.AdicionarParametros( "@Rua", endereco.Rua );
+				dbDizimo.AdicionarParametros( "@Numero", endereco.Numero );
+				dbDizimo.AdicionarParametros( "@Bairro", endereco.Bairro );
+				dbDizimo.AdicionarParametros( "@Cep", endereco.Cep );
+     			dbDizimo.AdicionarParametros( "@Cidade", endereco.Cidade );
+				dbDizimo.AdicionarParametros( "@DataCadastro", DateTime.Now );
+
+				string IdProcessamento = Convert.ToString( dbDizimo.ExecutarManipulacao( CommandType.Text,
 				"   INSERT INTO ENDERECO  " +
-				"   (Id,Rua,Numero,Bairro,Cep,Cidade,DataCadastro) " +
-				"   VALUES (@Id,@Rua,@Numero,@Bairro,@Cep,@Cidade,@DataCadastro) "));
+				"   (IdPessoa,Rua,Numero,Bairro,Cep,Cidade,DataCadastro) " +
+				"   VALUES (@IdPessoa,@Rua,@Numero,@Bairro,@Cep,@Cidade,@DataCadastro) "+
+				"    SET @ID = @@IDENTITY; " +
+				"    SELECT (@ID) AS Retorno  "
+				) );
 
+				if ( !string.IsNullOrEmpty( IdProcessamento ) )
+				{
+					endereco.ID = Convert.ToInt32( IdProcessamento );
 
-				return IdProcessamento;
+				}
+				return endereco;
 			}
-			catch (Exception exception)
+			catch ( Exception exception )
 			{
 
-				return exception.Message;
+				Console.WriteLine( "Erro" + exception );
+
 			}
+
+			return endereco;
 		}
 
-		public string Update( Endereco endereco)
-        {
+		public string Update( Endereco endereco )
+		{
 			try
 			{
-				dbDizimo.AdicionarParametros("@Id", endereco.ID);
-				dbDizimo.AdicionarParametros("@Rua", endereco.Rua);
-				dbDizimo.AdicionarParametros("@Numero", endereco.Numero);
-				dbDizimo.AdicionarParametros("@Bairro", endereco.Bairro); 
-				dbDizimo.AdicionarParametros("@Cep", endereco.Cep); 
-				dbDizimo.AdicionarParametros("@Cidade", endereco.Cidade); 
-				dbDizimo.AdicionarParametros("@DataCadastro", DateTime.Now);
-				
+				dbDizimo.AdicionarParametros( "@Id", endereco.ID );
+				dbDizimo.AdicionarParametros( "@Rua", endereco.Rua );
+				dbDizimo.AdicionarParametros( "@Numero", endereco.Numero );
+				dbDizimo.AdicionarParametros( "@Bairro", endereco.Bairro );
+				dbDizimo.AdicionarParametros( "@Cep", endereco.Cep );
+				dbDizimo.AdicionarParametros( "@Cidade", endereco.Cidade );
+				dbDizimo.AdicionarParametros( "@DataCadastro", DateTime.Now );
 
-				string IdProcessamento = Convert.ToString(dbDizimo.ExecutarManipulacao(CommandType.Text,
+
+				string IdProcessamento = Convert.ToString( dbDizimo.ExecutarManipulacao( CommandType.Text,
 				"   UPDATE ENDERECO  " +
-				"   SET Rua=@Rua,Numero=@Numero,Bairro=@Bairro,Cep=@Cep,Cidade=@Cidade,DataCadastro=GETDATE(),Status=@Status " +
-				"   WHERE ID=@ID "));
+				"   SET Rua=@Rua,Numero=@Numero,Bairro=@Bairro,Cep=@Cep,Cidade=@Cidade,DataCadastro=@DataCadastro " +
+				"   WHERE ID=@ID " ) );
 
 
 				return IdProcessamento;
 			}
-			catch (Exception exception)
+			catch ( Exception exception )
 			{
 
 				return exception.Message;
 			}
 		}
 
-		public string Delete( Endereco endereco)
-        {
+		public string Delete( Endereco endereco )
+		{
 			try
 			{
 				dbDizimo.LimparParametros();
 
-				dbDizimo.AdicionarParametros("@ID", endereco.ID);
-				string IdProcessamento = Convert.ToString(dbDizimo.ExecutarManipulacao(CommandType.Text,
-				"   DELETE Usuario WHERE ID=@ID"));
+				dbDizimo.AdicionarParametros( "@ID", endereco.ID );
+				string IdProcessamento = Convert.ToString( dbDizimo.ExecutarManipulacao( CommandType.Text,
+				" DELETE ENDERECO WHERE ID=@ID" ) );
 
 
 				return IdProcessamento;
 			}
-			catch (Exception exception)
+			catch ( Exception exception )
 			{
 
 				return exception.Message;
@@ -90,42 +101,43 @@ namespace DizimoApp.Aplicacao
 		}
 
 		public Endereco.EnderecoCollection ListaEnderecos()
-        {
+		{
 			try
 			{
 				dbDizimo.LimparParametros();
 				Endereco.EnderecoCollection listaEnderecoColection = new Endereco.EnderecoCollection();
-				DataTable dataTable = dbDizimo.ExecutaConsulta(CommandType.Text,
-				" SELECT * FROM  ENDERECO ORDER BY Endereco ASC ");
+				DataTable dataTable = dbDizimo.ExecutaConsulta( CommandType.Text,
+				" SELECT * FROM ENDERECO ORDER BY Endereco ASC " );
 
 				//Percorrer o DataTable 
 				//Cada linha do datatable é um Registro
 				//for = para  each cada
 
-				foreach (DataRow item in dataTable.Rows)
+				foreach ( DataRow item in dataTable.Rows )
 				{
 					var endereco = new Endereco();
 					//colocar dados da linha nele
-					endereco.ID = Convert.ToInt32(item["ID"]);
-					endereco.Rua = Convert.ToString(item["Rua"]);
-					endereco.Numero = Convert.ToInt32(item["Numero"]);
-					endereco.Bairro = Convert.ToString(item["Bairro"]);
-					endereco.Cep = Convert.ToInt32(item["Numero"]);
-					endereco.Cidade = Convert.ToString(item["Cidade"]);
-					endereco.DataCadastro = Convert.ToInt32(item["DataCadastro"]);
-				
+					endereco.ID = Convert.ToInt32( item[ "ID" ] );
+					endereco.IdPessoa = Convert.ToInt32( item[ "IdPessoa" ] );
+					endereco.Rua = Convert.ToString( item[ "Rua" ] );
+					endereco.Numero = Convert.ToString( item[ "Numero" ] );
+					endereco.Bairro = Convert.ToString( item[ "Bairro" ] );
+					endereco.Cep = Convert.ToString( item[ "Cep" ] );
+					endereco.Cidade = Convert.ToString( item[ "Cidade" ] );
+					endereco.DataCadastro = Convert.ToDateTime( item[ "DataCadastro" ] );
 
-					listaEnderecoColection.Add(endereco);
+
+					listaEnderecoColection.Add( endereco );
 				}
 				return listaEnderecoColection;
 			}
-			catch (Exception exception)
+			catch ( Exception exception )
 			{
-				Console.WriteLine("Erro " + exception.Message);
+				Console.WriteLine( "Erro " + exception.Message );
 			}
 
 			return null;
 		}
 	}
-    
+
 }

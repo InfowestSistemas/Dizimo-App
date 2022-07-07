@@ -16,7 +16,8 @@ namespace DizimoApp.Aplicacao
 		{
 			try
 			{
-				dbDizimo.AdicionarParametros("@Id", dizimo.Id);
+				dbDizimo.LimparParametros();
+				dbDizimo.AdicionarParametros( "@ID ", "" );
 				dbDizimo.AdicionarParametros("@IdPessoa", 1);
 				dbDizimo.AdicionarParametros("@DizimoCategoria", dizimo.DizimoCategoria);
 				dbDizimo.AdicionarParametros("@Valor", dizimo.Valor);

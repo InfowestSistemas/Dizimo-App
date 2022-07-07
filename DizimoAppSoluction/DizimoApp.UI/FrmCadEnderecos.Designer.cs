@@ -295,6 +295,7 @@ namespace DizimoApp.UI
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "FrmCadEnderecos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Endereços";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);

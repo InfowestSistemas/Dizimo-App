@@ -8,15 +8,14 @@ namespace DizimoApp.Dominio
 {
     public class Endereco
     {
+        public int ID { get; set; }
+        public int IdPessoa { get; set; }
         public string Rua { get; set; }
-        public int Numero { get; set; }
-        public int Cep { get; set; }
+        public string Numero { get; set; }
+        public string Cep { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }
-        public string UF { get; set; }
-        public int Telefone { get; set; }
-        public object ID { get; set; }
-        public int DataCadastro { get; set; }
+        public DateTime DataCadastro { get; set; }
 
         public class EnderecoCollection : List<Endereco>
         {

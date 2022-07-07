@@ -65,7 +65,10 @@ namespace DizimoApp.Aplicacao
 				string IdProcessamento = Convert.ToString(dbDizimo.ExecutarManipulacao ( CommandType.Text,
 				"   INSERT INTO USUARIO  " +
 				"   (IdPessoa,Usuario,Senha,DataCadastro,Status) " +
-				"   VALUES (@IdPessoa,@Usuario,@Senha,@DataCadastro,@Status) " ));
+				"   VALUES (@IdPessoa,@Usuario,@Senha,@DataCadastro,@Status) " +
+				"    SET @Id = @@IDENTITY; " +
+				"    SELECT (@Id) AS Retorno  "
+				) );
 
 
 				return IdProcessamento;

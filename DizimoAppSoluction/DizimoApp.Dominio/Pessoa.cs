@@ -8,17 +8,23 @@ namespace DizimoApp.Dominio
 {
     public class Pessoa
     {
-        public static DateTime DataCadastro;
-        public object IdPessoa;
-
+       
+        public int ID { get; set; }
         public string Nome{ get; set; }
-        public int DataDeNascimento { get; set; }
+        public string Telefone { get; set; }
         public string Email { get; set; }
-        public int Telefone { get; set; }
-        public string TipoDePessoa { get; set; }
-        public int DataDeCadastro{ get; set; }
-        public string Status { get; set; }
-        public object ID { get; set; }
+
+        public bool Status { get; set; }
+
+        public DateTime DataCadastro { get; set; }
+
+        #region [ Endereço ]
+        public string E_Rua { get; set; }
+        public string E_Numero { get; set; }
+        public string E_Cep { get; set; }
+        public string E_Bairro { get; set; }
+        public string E_Cidade { get; set; }
+        #endregion
 
         public class PessoaCollection : List<Pessoa>
         {
