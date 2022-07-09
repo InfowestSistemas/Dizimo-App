@@ -42,9 +42,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Endereco.cs" />
+    <Compile Include="Fluxocaixa.cs" />
+    <Compile Include="FluxoTipo.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Pessoa.cs" />
+    <Compile Include="PessoaCategoria.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DizimoApp.DAL\DizimoApp.Repository.csproj">
+      <Project>{48F337EA-F5D8-4829-81B3-30B4CCCCD705}</Project>
+      <Name>DizimoApp.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
