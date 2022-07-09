@@ -57,6 +57,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ScripsSQL\06_SQLQuery_CriaTable_Fluxocaixa.sql" />
+    <Content Include="ScripsSQL\05_SQLQuery_CriaTable_FluxoTipo.sql" />
     <Content Include="ScripsSQL\01_SQLQuery_CriaTable_Pessoa.sql" />
     <Content Include="ScripsSQL\04_SQLQuery_CriaTable_PessoaCategoria.sql" />
     <Content Include="ScripsSQL\03_SQLQuery_CriaTable_Endereco.sql" />
