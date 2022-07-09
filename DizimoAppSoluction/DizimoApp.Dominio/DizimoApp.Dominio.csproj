@@ -42,8 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Endereco.cs" />
+    <Compile Include="Fluxocaixa.cs" />
+    <Compile Include="FluxoTipo.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Pessoa.cs" />
+    <Compile Include="PessoaCategoria.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
