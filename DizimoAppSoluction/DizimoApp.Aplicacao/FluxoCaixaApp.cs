@@ -15,7 +15,7 @@ namespace DizimoApp.Aplicacao
         DizimoDB dbDizimo = new DizimoDB();
 	
 
-        public Fluxocaixa Create( Fluxocaixa fluxocaixa )
+        public FluxoCaixa Create( FluxoCaixa fluxocaixa )
 		{
 			try
 			{
@@ -71,7 +71,7 @@ namespace DizimoApp.Aplicacao
 
 				if (!string.IsNullOrEmpty(IdProcessamento))
 				{
-					pessoa.ID = Convert.ToInt32(IdProcessamento);
+					fluxocaixa.ID = Convert.ToInt32(IdProcessamento);
 
 				}
 				return fluxocaixa;
@@ -91,7 +91,7 @@ namespace DizimoApp.Aplicacao
 
 				dbDizimo.AdicionarParametros("@ID", Id);
 				string IdProcessamento = Convert.ToString(dbDizimo.ExecutarManipulacao(CommandType.Text,
-				"   DELETE PESSOA WHERE ID=@ID" +
+				"   DELETE FluxoCaixa WHERE ID=@ID" +
 				"    SELECT (@ID) AS Retorno  "
 				));
 
@@ -103,18 +103,18 @@ namespace DizimoApp.Aplicacao
 				return exception.Message;
 			}
 		}
-		public FluxoCaixaApp.FluxoCaixaCollection ListarFluxoCaixa()
+		public FluxoCaixa.FluxocaixaCollection Listarfluxocaixa()
 		{
 			try
 			{
 				dbDizimo.LimparParametros();
-				Pessoa.PessoaCollection listaPessoaColection = new Pessoa.PessoaCollection();
+				FluxoCaixa.FluxocaixaCollection listaFluxoCaixaColection = new FluxoCaixa.FluxocaixaCollection();
 				DataTable dataTable = dbDizimo.ExecutaConsulta(CommandType.Text,
 				" SELECT " +
-				" P.ID, P.Nome, P.Telefone, P.Email, P.[Status],P.DataCadastro, " +
-				" E.Rua, E.Numero, E.Bairro, E.Cep, E.Cidade " +
-				" FROM Pessoa P " +
-				" LEFT OUTER JOIN Endereco E ON P.ID = E.IdPessoa " +
+				" P.ID, P.IdPessoa, P.DizimoCategoria, P.Valor,P.DataCadastro, " +
+				" E.ID, E.Descricao " +
+				" FROM FluxoCaixa P " +
+				" LEFT OUTER JOIN FluxoTipo E ON P.ID = E.Descricao " +
 				" ORDER BY ID ASC ");
 
 				//Percorrer o DataTable 
@@ -123,25 +123,18 @@ namespace DizimoApp.Aplicacao
 
 				foreach (DataRow item in dataTable.Rows)
 				{
-					var pessoa = new Pessoa();
+					var FluxoCaixa = new FluxoCaixa();
 					//colocar dados da linha nele
 
-					pessoa.ID = Convert.ToInt32(item["ID"]);
-					pessoa.Nome = Convert.ToString(item["Nome"]);
-					pessoa.Email = Convert.ToString(item["Email"]);
-					pessoa.Telefone = Convert.ToString(item["Telefone"]);
-					string status = Convert.ToString(item["Status"]);
-					pessoa.Status = Convert.ToBoolean(status);
-					pessoa.E_Rua = Convert.ToString(item["Rua"]);
-					pessoa.E_Numero = Convert.ToString(item["Numero"]);
-					pessoa.E_Bairro = Convert.ToString(item["Bairro"]);
-					pessoa.E_Cep = Convert.ToString(item["Cep"]);
-					pessoa.E_Cidade = Convert.ToString(item["Cidade"]);
-					pessoa.DataCadastro = Convert.ToDateTime(item["DataCadastro"]);
+					FluxoCaixa.ID = Convert.ToInt32(item["ID"]);
+					FluxoCaixa.IdPessoa = Convert.ToInt32(item["IdPessoa"]);
+					FluxoCaixa.DizimoCategoria = Convert.ToString(item["DizimoCategoria"]);
+					FluxoCaixa.Valor = Convert.ToDecimal(item["Valor"]);							
+					FluxoCaixa.DataCadastro = Convert.ToDateTime(item["DataCadastro"]);
 
-					listaPessoaColection.Add(pessoa);
+                    listaFluxoCaixaColection.Add(FluxoCaixa);
 				}
-				return listaPessoaColection;
+				return listaFluxoCaixaColection;
 			}
 			catch (Exception exception)
 			{
@@ -151,8 +144,6 @@ namespace DizimoApp.Aplicacao
 			return null;
 		}
 
-        public class FluxoCaixaCollection
-        {
-        }
+     
     }
 }

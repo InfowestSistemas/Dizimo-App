@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace DizimoApp.Dominio
 {
-    public class Fluxocaixa
+    public class FluxoCaixa
     {
         public int ID { get; set; }
 
@@ -21,7 +22,10 @@ namespace DizimoApp.Dominio
 
         public class FluxocaixaCollection : List<Fluxocaixa>
         {
-
+            public void Add(FluxoCaixa fluxoCaixa)
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 } 
