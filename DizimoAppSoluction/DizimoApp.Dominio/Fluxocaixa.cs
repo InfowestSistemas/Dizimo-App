@@ -1,5 +1,4 @@
-﻿using DizimoApp.Repository;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +19,7 @@ namespace DizimoApp.Dominio
 
         public DateTime DataCadastro { get; set; }
 
-        public class FluxocaixaCollection : List<Fluxocaixa>
+        public class FluxocaixaCollection : List<FluxoCaixa>
         {
 
         }
