@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnderecoApp.cs" />
+    <Compile Include="FluxoCaixaApp.cs" />
     <Compile Include="LoginApp.cs" />
     <Compile Include="PessoaApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
