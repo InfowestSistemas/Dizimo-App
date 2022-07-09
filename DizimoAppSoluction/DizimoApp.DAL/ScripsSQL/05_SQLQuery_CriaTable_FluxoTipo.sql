@@ -19,3 +19,6 @@ CREATE TABLE [dbo].[FluxoTipo](
 GO
 
 
+INSERT INTO [FluxoTipo] (Descricao) VALUES('Dízimo')
+INSERT INTO [FluxoTipo] (Descricao) VALUES('Oferta')
+INSERT INTO [FluxoTipo] (Descricao) VALUES('Voto')

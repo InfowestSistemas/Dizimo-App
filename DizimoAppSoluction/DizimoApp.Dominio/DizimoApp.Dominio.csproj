@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Endereco.cs" />
-    <Compile Include="Fluxocaixa.cs" />
+    <Compile Include="FluxoCaixa.cs" />
     <Compile Include="FluxoTipo.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Pessoa.cs" />

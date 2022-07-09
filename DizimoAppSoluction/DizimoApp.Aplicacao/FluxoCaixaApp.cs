@@ -1,12 +1,12 @@
-﻿using DizimoApp.Dominio;
-using DizimoApp.Repository;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using DizimoApp.Repository;
+using DizimoApp.Dominio;
 
 namespace DizimoApp.Aplicacao
 {
@@ -14,7 +14,6 @@ namespace DizimoApp.Aplicacao
     {
         DizimoDB dbDizimo = new DizimoDB();
 	
-
         public FluxoCaixa Create( FluxoCaixa fluxocaixa )
 		{
 			try
@@ -103,12 +102,12 @@ namespace DizimoApp.Aplicacao
 				return exception.Message;
 			}
 		}
-		public FluxoCaixa.FluxocaixaCollection Listarfluxocaixa()
+		public FluxoCaixa.FluxoCaixaCollection Listarfluxocaixa()
 		{
 			try
 			{
 				dbDizimo.LimparParametros();
-				FluxoCaixa.FluxocaixaCollection listaFluxoCaixaColection = new FluxoCaixa.FluxocaixaCollection();
+				FluxoCaixa.FluxoCaixaCollection listaFluxoCaixaColection = new FluxoCaixa.FluxoCaixaCollection();
 				DataTable dataTable = dbDizimo.ExecutaConsulta(CommandType.Text,
 				" SELECT " +
 				" P.ID, P.IdPessoa, P.DizimoCategoria, P.Valor,P.DataCadastro, " +
@@ -143,7 +142,6 @@ namespace DizimoApp.Aplicacao
 
 			return null;
 		}
-
-     
+		     
     }
 }

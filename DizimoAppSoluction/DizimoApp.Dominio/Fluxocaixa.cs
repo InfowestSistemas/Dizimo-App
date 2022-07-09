@@ -19,7 +19,7 @@ namespace DizimoApp.Dominio
 
         public DateTime DataCadastro { get; set; }
 
-        public class FluxocaixaCollection : List<FluxoCaixa>
+        public class FluxoCaixaCollection : List<FluxoCaixa>
         {
 
         }

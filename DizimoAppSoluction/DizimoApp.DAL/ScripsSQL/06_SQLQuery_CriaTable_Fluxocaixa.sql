@@ -11,7 +11,7 @@ GO
 CREATE TABLE [dbo].[FluxoCaixa](
 	[ID] [int] IDENTITY(1,1) NOT NULL,
 	[IdPessoa] [int] NOT NULL,
-	[DizimoCategoria] [varchar](50) NOT NULL,
+	[IdFluxoTipo] [int] NOT NULL,
 	[Valor] [decimal](18, 0) NOT NULL,
 	[DataCadastro] [datetime] NOT NULL,
  CONSTRAINT [PK_FluxoCaixa] PRIMARY KEY CLUSTERED 
@@ -21,4 +21,4 @@ CREATE TABLE [dbo].[FluxoCaixa](
 ) ON [PRIMARY]
 GO
 
-
+INSERT INTO [FluxoCaixa] (IdPessoa,IdFluxoTipo,Valor,DataCadastro) VALUES(1,1,250.45,GETDATE())

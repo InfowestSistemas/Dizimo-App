@@ -12,7 +12,7 @@ namespace DizimoApp.Dominio
 
         public string Descricao { get; set; }
 
-        public class FluxoTipoCategoriaCollection : List<FluxoTipo>
+        public class FluxoTipoCollection : List<FluxoTipo>
         {
 
         }

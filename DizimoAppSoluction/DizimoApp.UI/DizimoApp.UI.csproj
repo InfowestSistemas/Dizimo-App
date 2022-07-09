@@ -129,6 +129,10 @@
       <Project>{33252b01-9281-404a-9fc6-cd82e1cf5979}</Project>
       <Name>DizimoApp.Aplicacao</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DizimoApp.DAL\DizimoApp.Repository.csproj">
+      <Project>{48f337ea-f5d8-4829-81b3-30b4ccccd705}</Project>
+      <Name>DizimoApp.Repository</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DizimoApp.Dominio\DizimoApp.Dominio.csproj">
       <Project>{2ad28da8-ab7a-4b52-8afc-d96b6b178b65}</Project>
       <Name>DizimoApp.Dominio</Name>
