@@ -26,5 +26,20 @@ namespace DizimoApp.UI
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbTipoContribuição_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

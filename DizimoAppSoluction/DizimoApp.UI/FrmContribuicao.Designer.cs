@@ -33,11 +33,15 @@ namespace DizimoApp.UI
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblValor = new System.Windows.Forms.Label();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.cmbTipoContribuição = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.txbCodigo = new System.Windows.Forms.TextBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.txbNome = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,31 +81,31 @@ namespace DizimoApp.UI
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DizimoApp.UI.Properties.Resources.Dizimo;
-            this.pictureBox1.Location = new System.Drawing.Point(386, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(404, 18);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(96, 78);
+            this.pictureBox1.Size = new System.Drawing.Size(67, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // label3
+            // lblValor
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Symbol", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(80, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 12);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Valor";
+            this.lblValor.AutoSize = true;
+            this.lblValor.BackColor = System.Drawing.Color.White;
+            this.lblValor.Font = new System.Drawing.Font("Segoe UI Symbol", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValor.ForeColor = System.Drawing.Color.Black;
+            this.lblValor.Location = new System.Drawing.Point(63, 145);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(31, 12);
+            this.lblValor.TabIndex = 1;
+            this.lblValor.Text = "Valor";
             // 
             // txtValor
             // 
             this.txtValor.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txtValor.Location = new System.Drawing.Point(82, 113);
+            this.txtValor.Location = new System.Drawing.Point(65, 160);
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(111, 20);
+            this.txtValor.Size = new System.Drawing.Size(151, 20);
             this.txtValor.TabIndex = 3;
             // 
             // cmbTipoContribuição
@@ -113,10 +117,11 @@ namespace DizimoApp.UI
             "Oferta",
             "Voto",
             "Missão"});
-            this.cmbTipoContribuição.Location = new System.Drawing.Point(212, 113);
+            this.cmbTipoContribuição.Location = new System.Drawing.Point(263, 160);
             this.cmbTipoContribuição.Name = "cmbTipoContribuição";
-            this.cmbTipoContribuição.Size = new System.Drawing.Size(168, 21);
+            this.cmbTipoContribuição.Size = new System.Drawing.Size(129, 21);
             this.cmbTipoContribuição.TabIndex = 4;
+            this.cmbTipoContribuição.SelectedIndexChanged += new System.EventHandler(this.cmbTipoContribuição_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -135,9 +140,9 @@ namespace DizimoApp.UI
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnRegistrar.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrar.Location = new System.Drawing.Point(183, 199);
+            this.btnRegistrar.Location = new System.Drawing.Point(183, 225);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(103, 30);
             this.btnRegistrar.TabIndex = 5;
@@ -145,18 +150,64 @@ namespace DizimoApp.UI
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
+            // txbCodigo
+            // 
+            this.txbCodigo.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txbCodigo.Location = new System.Drawing.Point(340, 119);
+            this.txbCodigo.Name = "txbCodigo";
+            this.txbCodigo.Size = new System.Drawing.Size(76, 20);
+            this.txbCodigo.TabIndex = 7;
+            this.txbCodigo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.BackColor = System.Drawing.Color.White;
+            this.lblCodigo.Font = new System.Drawing.Font("Segoe UI Symbol", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.ForeColor = System.Drawing.Color.Black;
+            this.lblCodigo.Location = new System.Drawing.Point(338, 104);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(39, 12);
+            this.lblCodigo.TabIndex = 6;
+            this.lblCodigo.Text = "Código";
+            this.lblCodigo.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // txbNome
+            // 
+            this.txbNome.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txbNome.Location = new System.Drawing.Point(65, 119);
+            this.txbNome.Name = "txbNome";
+            this.txbNome.Size = new System.Drawing.Size(254, 20);
+            this.txbNome.TabIndex = 9;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.BackColor = System.Drawing.Color.White;
+            this.lblNome.Font = new System.Drawing.Font("Segoe UI Symbol", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.Black;
+            this.lblNome.Location = new System.Drawing.Point(63, 104);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(34, 12);
+            this.lblNome.TabIndex = 8;
+            this.lblNome.Text = "Nome";
+            // 
             // FrmContribuicao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(483, 310);
+            this.Controls.Add(this.txbNome);
+            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.txbCodigo);
+            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.cmbTipoContribuição);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblValor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
@@ -175,10 +226,14 @@ namespace DizimoApp.UI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblValor;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.ComboBox cmbTipoContribuição;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.TextBox txbCodigo;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.TextBox txbNome;
+        private System.Windows.Forms.Label lblNome;
     }
 }
