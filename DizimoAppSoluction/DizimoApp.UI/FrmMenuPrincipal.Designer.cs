@@ -44,15 +44,16 @@ namespace DizimoApp.UI
             this.lblID = new System.Windows.Forms.Label();
             this.lblContatoSelecionado = new System.Windows.Forms.Label();
             this.lblContato = new System.Windows.Forms.Label();
+            this.btnLancamentos = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ListaCadastros)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 502);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 272);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(996, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(686, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -62,7 +63,7 @@ namespace DizimoApp.UI
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(996, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(686, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -100,9 +101,9 @@ namespace DizimoApp.UI
             // dataGridView_ListaCadastros
             // 
             this.dataGridView_ListaCadastros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_ListaCadastros.Location = new System.Drawing.Point(12, 97);
+            this.dataGridView_ListaCadastros.Location = new System.Drawing.Point(12, 112);
             this.dataGridView_ListaCadastros.Name = "dataGridView_ListaCadastros";
-            this.dataGridView_ListaCadastros.Size = new System.Drawing.Size(984, 402);
+            this.dataGridView_ListaCadastros.Size = new System.Drawing.Size(662, 133);
             this.dataGridView_ListaCadastros.TabIndex = 15;
             this.dataGridView_ListaCadastros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ListaCadastros_CellClick);
             this.dataGridView_ListaCadastros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ListaCadastros_CellContentClick);
@@ -116,7 +117,7 @@ namespace DizimoApp.UI
             this.btnPesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnPesquisar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnPesquisar.Location = new System.Drawing.Point(384, 36);
+            this.btnPesquisar.Location = new System.Drawing.Point(290, 34);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(86, 33);
             this.btnPesquisar.TabIndex = 16;
@@ -127,17 +128,18 @@ namespace DizimoApp.UI
             // txbPesquisa
             // 
             this.txbPesquisa.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbPesquisa.Location = new System.Drawing.Point(12, 37);
+            this.txbPesquisa.Location = new System.Drawing.Point(12, 34);
             this.txbPesquisa.Name = "txbPesquisa";
-            this.txbPesquisa.Size = new System.Drawing.Size(366, 33);
+            this.txbPesquisa.Size = new System.Drawing.Size(249, 33);
             this.txbPesquisa.TabIndex = 17;
+            this.txbPesquisa.TextChanged += new System.EventHandler(this.txbPesquisa_TextChanged);
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.White;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(367, -6);
+            this.lblTitulo.Location = new System.Drawing.Point(178, -6);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(309, 30);
             this.lblTitulo.TabIndex = 18;
@@ -153,7 +155,7 @@ namespace DizimoApp.UI
             this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEditar.Location = new System.Drawing.Point(476, 37);
+            this.btnEditar.Location = new System.Drawing.Point(382, 35);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(86, 32);
             this.btnEditar.TabIndex = 19;
@@ -170,7 +172,7 @@ namespace DizimoApp.UI
             this.btnExcluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnExcluir.Location = new System.Drawing.Point(568, 37);
+            this.btnExcluir.Location = new System.Drawing.Point(474, 35);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(86, 32);
             this.btnExcluir.TabIndex = 20;
@@ -181,7 +183,7 @@ namespace DizimoApp.UI
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(938, 56);
+            this.lblID.Location = new System.Drawing.Point(266, 46);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(18, 13);
             this.lblID.TabIndex = 21;
@@ -203,19 +205,36 @@ namespace DizimoApp.UI
             // 
             this.lblContato.AutoSize = true;
             this.lblContato.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContato.Location = new System.Drawing.Point(192, 73);
+            this.lblContato.Location = new System.Drawing.Point(192, 71);
             this.lblContato.Name = "lblContato";
             this.lblContato.Size = new System.Drawing.Size(69, 21);
             this.lblContato.TabIndex = 21;
             this.lblContato.Text = "Contato";
             this.lblContato.Visible = false;
             // 
+            // btnLancamentos
+            // 
+            this.btnLancamentos.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLancamentos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLancamentos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLancamentos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnLancamentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnLancamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLancamentos.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnLancamentos.Location = new System.Drawing.Point(566, 35);
+            this.btnLancamentos.Name = "btnLancamentos";
+            this.btnLancamentos.Size = new System.Drawing.Size(108, 32);
+            this.btnLancamentos.TabIndex = 23;
+            this.btnLancamentos.Text = "Lançamentos";
+            this.btnLancamentos.UseVisualStyleBackColor = false;
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(996, 524);
+            this.ClientSize = new System.Drawing.Size(686, 294);
+            this.Controls.Add(this.btnLancamentos);
             this.Controls.Add(this.lblContatoSelecionado);
             this.Controls.Add(this.lblContato);
             this.Controls.Add(this.lblID);
@@ -257,5 +276,6 @@ namespace DizimoApp.UI
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblContatoSelecionado;
         private System.Windows.Forms.Label lblContato;
+        private System.Windows.Forms.Button btnLancamentos;
     }
 }

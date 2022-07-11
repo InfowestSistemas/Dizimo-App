@@ -139,5 +139,10 @@ namespace DizimoApp.UI
 
             
         }
+
+        private void txbPesquisa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
