@@ -24,7 +24,9 @@ namespace DizimoApp.Dominio
         public string E_Bairro { get; set; }
         public string E_Cidade { get; set; }
         #endregion
-
+        /// <summary>
+        ///  TESTE COMMIT
+        /// </summary>
         public class PessoaCollection : List<Pessoa>
         {
         }
