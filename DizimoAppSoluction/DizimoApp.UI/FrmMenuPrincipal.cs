@@ -13,6 +13,7 @@ namespace DizimoApp.UI
 {
     public partial class FrmMenuPrincipal : Form
     {
+      
         public FrmMenuPrincipal()
         {
             InitializeComponent();
@@ -144,5 +145,34 @@ namespace DizimoApp.UI
         {
 
         }
+
+        private void btnLancamentos_Click(object sender, EventArgs e)
+        {
+            
+
+            string Id = lblID.Text;
+            int IdPessoa = 0;
+
+            if ( !string.IsNullOrEmpty( Id ) && Id != "ID" )
+            {
+                IdPessoa = Convert.ToInt32( Id );
+
+                FrmContribuicao frmContribuicao = new FrmContribuicao(IdPessoa);
+                frmContribuicao.Show();
+            }
+            else
+            {
+                MessageBox.Show( "Atenção ! Selecione um contato para lançamento " );
+            }
+         
+
+
+        }
+
+        private void lblContato_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+    
 }

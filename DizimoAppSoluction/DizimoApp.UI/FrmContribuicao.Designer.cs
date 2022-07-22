@@ -38,10 +38,10 @@ namespace DizimoApp.UI
             this.cmbTipoContribuição = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.txbCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.txbNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
+            this.lblCodigoDizimista = new System.Windows.Forms.Label();
+            this.lblNomeDizimista = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,35 +150,18 @@ namespace DizimoApp.UI
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // txbCodigo
-            // 
-            this.txbCodigo.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txbCodigo.Location = new System.Drawing.Point(340, 119);
-            this.txbCodigo.Name = "txbCodigo";
-            this.txbCodigo.Size = new System.Drawing.Size(76, 20);
-            this.txbCodigo.TabIndex = 7;
-            this.txbCodigo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.BackColor = System.Drawing.Color.White;
             this.lblCodigo.Font = new System.Drawing.Font("Segoe UI Symbol", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.Color.Black;
-            this.lblCodigo.Location = new System.Drawing.Point(338, 104);
+            this.lblCodigo.Location = new System.Drawing.Point(18, 104);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(39, 12);
             this.lblCodigo.TabIndex = 6;
             this.lblCodigo.Text = "Código";
             this.lblCodigo.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // txbNome
-            // 
-            this.txbNome.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txbNome.Location = new System.Drawing.Point(65, 119);
-            this.txbNome.Name = "txbNome";
-            this.txbNome.Size = new System.Drawing.Size(254, 20);
-            this.txbNome.TabIndex = 9;
             // 
             // lblNome
             // 
@@ -192,15 +175,33 @@ namespace DizimoApp.UI
             this.lblNome.TabIndex = 8;
             this.lblNome.Text = "Nome";
             // 
+            // lblCodigoDizimista
+            // 
+            this.lblCodigoDizimista.AutoSize = true;
+            this.lblCodigoDizimista.Location = new System.Drawing.Point(20, 125);
+            this.lblCodigoDizimista.Name = "lblCodigoDizimista";
+            this.lblCodigoDizimista.Size = new System.Drawing.Size(26, 13);
+            this.lblCodigoDizimista.TabIndex = 9;
+            this.lblCodigoDizimista.Text = "Cod";
+            // 
+            // lblNomeDizimista
+            // 
+            this.lblNomeDizimista.AutoSize = true;
+            this.lblNomeDizimista.Location = new System.Drawing.Point(62, 125);
+            this.lblNomeDizimista.Name = "lblNomeDizimista";
+            this.lblNomeDizimista.Size = new System.Drawing.Size(35, 13);
+            this.lblNomeDizimista.TabIndex = 10;
+            this.lblNomeDizimista.Text = "Nome";
+            // 
             // FrmContribuicao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(483, 310);
-            this.Controls.Add(this.txbNome);
+            this.Controls.Add(this.lblNomeDizimista);
+            this.Controls.Add(this.lblCodigoDizimista);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.txbCodigo);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.cmbTipoContribuição);
@@ -214,6 +215,7 @@ namespace DizimoApp.UI
             this.Name = "FrmContribuicao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contribuições";
+            this.Load += new System.EventHandler(this.FrmContribuicao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -231,9 +233,9 @@ namespace DizimoApp.UI
         private System.Windows.Forms.ComboBox cmbTipoContribuição;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.TextBox txbCodigo;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.TextBox txbNome;
         private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblCodigoDizimista;
+        private System.Windows.Forms.Label lblNomeDizimista;
     }
 }

@@ -211,6 +211,7 @@ namespace DizimoApp.UI
             this.lblContato.TabIndex = 21;
             this.lblContato.Text = "Contato";
             this.lblContato.Visible = false;
+            this.lblContato.Click += new System.EventHandler(this.lblContato_Click);
             // 
             // btnLancamentos
             // 
@@ -227,6 +228,7 @@ namespace DizimoApp.UI
             this.btnLancamentos.TabIndex = 23;
             this.btnLancamentos.Text = "Lançamentos";
             this.btnLancamentos.UseVisualStyleBackColor = false;
+            this.btnLancamentos.Click += new System.EventHandler(this.btnLancamentos_Click);
             // 
             // FrmMenuPrincipal
             // 
