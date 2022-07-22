@@ -173,6 +173,13 @@ namespace DizimoApp.UI
         {
 
         }
+
+        private void btnCadastro_Click(object sender, EventArgs e)
+        {
+            FrmCadMembros frmCadMembros = new FrmCadMembros();
+            frmCadMembros.Show();
+            this.Close();
+        }
     }
     
 }

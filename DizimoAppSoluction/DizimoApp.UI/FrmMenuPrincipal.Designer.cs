@@ -45,6 +45,7 @@ namespace DizimoApp.UI
             this.lblContatoSelecionado = new System.Windows.Forms.Label();
             this.lblContato = new System.Windows.Forms.Label();
             this.btnLancamentos = new System.Windows.Forms.Button();
+            this.btnCadastro = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ListaCadastros)).BeginInit();
             this.SuspendLayout();
@@ -117,7 +118,7 @@ namespace DizimoApp.UI
             this.btnPesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnPesquisar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnPesquisar.Location = new System.Drawing.Point(290, 34);
+            this.btnPesquisar.Location = new System.Drawing.Point(230, 34);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(86, 33);
             this.btnPesquisar.TabIndex = 16;
@@ -130,7 +131,7 @@ namespace DizimoApp.UI
             this.txbPesquisa.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPesquisa.Location = new System.Drawing.Point(12, 34);
             this.txbPesquisa.Name = "txbPesquisa";
-            this.txbPesquisa.Size = new System.Drawing.Size(249, 33);
+            this.txbPesquisa.Size = new System.Drawing.Size(188, 33);
             this.txbPesquisa.TabIndex = 17;
             this.txbPesquisa.TextChanged += new System.EventHandler(this.txbPesquisa_TextChanged);
             // 
@@ -155,7 +156,7 @@ namespace DizimoApp.UI
             this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEditar.Location = new System.Drawing.Point(382, 35);
+            this.btnEditar.Location = new System.Drawing.Point(402, 35);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(86, 32);
             this.btnEditar.TabIndex = 19;
@@ -172,7 +173,7 @@ namespace DizimoApp.UI
             this.btnExcluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnExcluir.Location = new System.Drawing.Point(474, 35);
+            this.btnExcluir.Location = new System.Drawing.Point(490, 35);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(86, 32);
             this.btnExcluir.TabIndex = 20;
@@ -183,7 +184,7 @@ namespace DizimoApp.UI
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(266, 46);
+            this.lblID.Location = new System.Drawing.Point(206, 46);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(18, 13);
             this.lblID.TabIndex = 21;
@@ -222,7 +223,7 @@ namespace DizimoApp.UI
             this.btnLancamentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnLancamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLancamentos.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnLancamentos.Location = new System.Drawing.Point(566, 35);
+            this.btnLancamentos.Location = new System.Drawing.Point(578, 34);
             this.btnLancamentos.Name = "btnLancamentos";
             this.btnLancamentos.Size = new System.Drawing.Size(108, 32);
             this.btnLancamentos.TabIndex = 23;
@@ -230,12 +231,30 @@ namespace DizimoApp.UI
             this.btnLancamentos.UseVisualStyleBackColor = false;
             this.btnLancamentos.Click += new System.EventHandler(this.btnLancamentos_Click);
             // 
+            // btnCadastro
+            // 
+            this.btnCadastro.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastro.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCadastro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastro.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCadastro.Location = new System.Drawing.Point(317, 35);
+            this.btnCadastro.Name = "btnCadastro";
+            this.btnCadastro.Size = new System.Drawing.Size(86, 32);
+            this.btnCadastro.TabIndex = 24;
+            this.btnCadastro.Text = "Cadastrar";
+            this.btnCadastro.UseVisualStyleBackColor = false;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(686, 294);
+            this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.btnLancamentos);
             this.Controls.Add(this.lblContatoSelecionado);
             this.Controls.Add(this.lblContato);
@@ -279,5 +298,6 @@ namespace DizimoApp.UI
         private System.Windows.Forms.Label lblContatoSelecionado;
         private System.Windows.Forms.Label lblContato;
         private System.Windows.Forms.Button btnLancamentos;
+        private System.Windows.Forms.Button btnCadastro;
     }
 }
