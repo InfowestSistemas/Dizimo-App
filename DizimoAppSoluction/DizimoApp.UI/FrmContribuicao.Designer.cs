@@ -42,6 +42,7 @@ namespace DizimoApp.UI
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCodigoDizimista = new System.Windows.Forms.Label();
             this.lblNomeDizimista = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,11 +113,6 @@ namespace DizimoApp.UI
             // 
             this.cmbTipoContribuição.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoContribuição.FormattingEnabled = true;
-            this.cmbTipoContribuição.Items.AddRange(new object[] {
-            "Dizimo",
-            "Oferta",
-            "Voto",
-            "Missão"});
             this.cmbTipoContribuição.Location = new System.Drawing.Point(263, 160);
             this.cmbTipoContribuição.Name = "cmbTipoContribuição";
             this.cmbTipoContribuição.Size = new System.Drawing.Size(129, 21);
@@ -193,12 +189,25 @@ namespace DizimoApp.UI
             this.lblNomeDizimista.TabIndex = 10;
             this.lblNomeDizimista.Text = "Nome";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Symbol", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(261, 145);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 12);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Tipo de Lançamento";
+            // 
             // FrmContribuicao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(483, 310);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblNomeDizimista);
             this.Controls.Add(this.lblCodigoDizimista);
             this.Controls.Add(this.lblNome);
@@ -237,5 +246,6 @@ namespace DizimoApp.UI
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblCodigoDizimista;
         private System.Windows.Forms.Label lblNomeDizimista;
+        private System.Windows.Forms.Label label3;
     }
 }
